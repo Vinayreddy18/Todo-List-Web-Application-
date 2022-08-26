@@ -66,7 +66,7 @@ app.get("/", function(req, res) {
 app.get("/:customListName", function(req, res){
   const customListName = _.capitalize(req.params.customListName);
 
-  List.findOne({name: customListName}, function(err, foundList){
+  List.findOne({name: customListName}, function(err,foundList){
     if (!err){
       if (!foundList){
         //Create a new list
